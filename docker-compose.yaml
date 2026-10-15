@@ -1,0 +1,15 @@
+services:
+
+  nginx1:
+    image: nginx:latest
+    ports:
+      - "9092:80"
+    volumes:
+      - ./vol:/usr/share/nginx/html #bind mount 
+
+  nginx2:
+    image: nginx:latest
+    ports:
+      - "9091:80"
+    volumes:
+      - ./vol:/usr/share/nginx/html #bind mount 
